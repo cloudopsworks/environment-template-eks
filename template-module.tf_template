@@ -1,0 +1,27 @@
+##
+# (c) 2021 - Cloud Ops Works LLC - https://cloudops.works/
+#            On GitHub: https://github.com/cloudopsworks
+#            Distributed Under Apache v2.0 License
+#
+module "MODULE_NAME" {
+  source         = "./modules/helm-install-azure"
+  resource_group = var.resource_group
+  cluster_name   = var.cluster_name
+  helm_repo      = var.default_helm_repo
+  ad_rbac        = var.azure_ad_rbac_enabled
+  oci_repo       = true
+  namespace      = var.default_namespace
+
+  release_name  = "<RELEASE-NAME>"
+  chart_name    = "<CHART-NAME-ON-REPO"
+  chart_version = "<VERSION>"
+
+  # Optional variable injection other than standard values/MODULE_NAME-values.yaml
+  #
+  # vars = {
+  #   "var"          = "DATA"
+  #   "varfile"      = file("textfile.txt)
+  #   "encoded file" = filebas64("binaryfile.bin")
+  # }
+}
+

@@ -1,0 +1,12 @@
+##
+# (c) 2021 - Cloud Ops Works LLC - https://cloudops.works/
+#            On GitHub: https://github.com/cloudopsworks
+#            Distributed Under Apache v2.0 License
+#
+resource_group        = "RESOURCE GROUP"
+cluster_name          = "AKS CLUSTER NAME"
+default_helm_repo     = "FULL PATH ACR REPOSITORY"
+default_namespace     = "<NAMESPACE TO DEPLOY>"
+subscription_id       = "<AZURE SUBSCRIPTION ID TO USE IN MSI>"
+tenant_id             = "<AZURE TENANT ID TO USE IN MSI>"
+azure_ad_rbac_enabled = false

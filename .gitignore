@@ -27,3 +27,19 @@ override.tf.json
 
 # Include tfplan files to ignore the plan output of command: terraform plan -out=tfplan
 # example: *tfplan*
+
+.terraform.lock.hcl
+
+
+# ignore downloaded oci helm charts
+.release/**
+
+# Ignore generated VERSION file
+VERSION
+
+# Ignore plans folder
+
+.plans/**
+
+# Ignore MAC files
+**/.DS_Store
