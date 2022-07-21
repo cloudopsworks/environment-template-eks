@@ -1,14 +1,13 @@
 ##
-# (c) 2021 - Cloud Ops Works LLC - https://cloudops.works/
+# (c) 2022 - Cloud Ops Works LLC - https://cloudops.works/
 #            On GitHub: https://github.com/cloudopsworks
 #            Distributed Under Apache v2.0 License
 #
 module "MODULE_NAME" {
-  source         = "./modules/helm-install-azure"
-  resource_group = var.resource_group
+  source         = "cloudopsworks/helm/aws"
+  version        = "1.0.0"
   cluster_name   = var.cluster_name
   helm_repo      = var.default_helm_repo
-  ad_rbac        = var.azure_ad_rbac_enabled
   oci_repo       = true
   namespace      = var.default_namespace
 
@@ -23,5 +22,8 @@ module "MODULE_NAME" {
   #   "varfile"      = file("textfile.txt)
   #   "encoded file" = filebas64("binaryfile.bin")
   # }
+  var_files = [
+    "default-requirements.yaml",
+  ]
 }
 

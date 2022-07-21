@@ -62,3 +62,8 @@ jobs:
           #base: "master"
           title: "Promote ${{ github.event.client_payload.promote.releasename }} v${{ github.event.client_payload.promote.version }}"
           token: ${{ secrets.BOT_TOKEN }}
+          body: |
+            Promotion of ${{ github.event.client_payload.promote.releasename }} v${{ github.event.client_payload.promote.version }}
+            Automatic Merge will be performed upon approval
+
+            Closes ${{ github.event.client_payload.promote.fromissue }} by ${{ github.event.client_payload.promote.fromauthor }}
