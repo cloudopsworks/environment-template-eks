@@ -13,7 +13,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: [ self-hosted, azure, ubuntu-latest ]
+    runs-on: ubuntu-latest
     steps:
       # Get the owner repo
       - name: Get owner
