@@ -3,23 +3,11 @@
 #            On GitHub: https://github.com/cloudopsworks
 #            Distributed Under Apache v2.0 License
 #
-variable "resource_group" {
-  type = string
+variable "region" {
+  type    = string
+  default = "us-east-1"
 }
 
-variable "cluster_name" {
+variable "sts_assume_role" {
   type = string
-}
-
-variable "subscription_id" {
-  type = string
-}
-
-variable "tenant_id" {
-  type = string
-}
-
-variable "azure_ad_rbac_enabled" {
-  type    = bool
-  default = false
 }

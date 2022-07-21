@@ -3,6 +3,10 @@
 #            On GitHub: https://github.com/cloudopsworks
 #            Distributed Under Apache v2.0 License
 #
+variable "cluster_name" {
+  type = string
+}
+
 variable "default_helm_repo" {
   type    = string
   default = "finconectaopsclusterprod.azurecr.io"

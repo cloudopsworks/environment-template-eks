@@ -4,7 +4,13 @@
 #            Distributed Under Apache v2.0 License
 #
 provider "aws" {
-  region = var.aws_region
+  region = var.region
+
+  assume_role {
+    role_arn     = var.sts_assume_role
+    session_name = "Terraform_ENV"
+    external_id  = "GitHubAction"
+  }
 }
 
 data "aws_eks_cluster" "cluster" {

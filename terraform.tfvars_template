@@ -3,10 +3,9 @@
 #            On GitHub: https://github.com/cloudopsworks
 #            Distributed Under Apache v2.0 License
 #
-resource_group        = "RESOURCE GROUP"
-cluster_name          = "AKS CLUSTER NAME"
-default_helm_repo     = "FULL PATH ACR REPOSITORY"
+region           = "AWS REGION"
+#use_sts          = true | false
+sts_assume_role          = "arn:aws:iam::ACCOUNT_ID:role/GITHubActionsRunRole"
+cluster_name          = "EKS CLUSTER NAME"
+default_helm_repo     = "FULL PATH ECR REPOSITORY"
 default_namespace     = "<NAMESPACE TO DEPLOY>"
-subscription_id       = "<AZURE SUBSCRIPTION ID TO USE IN MSI>"
-tenant_id             = "<AZURE TENANT ID TO USE IN MSI>"
-azure_ad_rbac_enabled = false
