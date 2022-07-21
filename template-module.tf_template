@@ -8,6 +8,8 @@ module "MODULE_NAME" {
   version        = "1.0.0"
   cluster_name   = var.cluster_name
   helm_repo      = var.default_helm_repo
+  helm_user      = locals.ecr_user
+  helm_password  = data.aws_ecr_authorization_token.token.password
   oci_repo       = true
   namespace      = var.default_namespace
 
