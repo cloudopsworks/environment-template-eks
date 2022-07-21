@@ -4,7 +4,7 @@
 #            Distributed Under Apache v2.0 License
 #
 OS := $(shell uname)
-NAMESPACE := "finconecta-staging"
+NAMESPACE := "NAMESPACE"
 VERFOUND := $(shell [ -f VERSION ] && echo 1 || echo 0)
 RELEASE_VERSION :=
 TARGET :=
