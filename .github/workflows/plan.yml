@@ -22,6 +22,9 @@ permissions:
 
 jobs:
   plan:
+    concurrency:
+      group: deploy-promotion
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     steps:
       - uses: actions/labeler@v3
