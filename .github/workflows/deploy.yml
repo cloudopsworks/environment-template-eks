@@ -33,6 +33,9 @@ jobs:
           fetch-depth: 0
 
       - uses: hashicorp/setup-terraform@v1
+        with:
+          terraform_version: 1.1.7
+
       - uses: azure/setup-helm@v1
 
       - name: Terraform Init
