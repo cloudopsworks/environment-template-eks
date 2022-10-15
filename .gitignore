@@ -43,3 +43,11 @@ VERSION
 
 # Ignore MAC files
 **/.DS_Store
+
+# Ignore IDEA IDE
+.idea
+*.iml
+
+# Ignore Eclipse IDE
+.classpath
+.settings
