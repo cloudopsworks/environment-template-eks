@@ -52,7 +52,7 @@ jobs:
 
       - uses: hashicorp/setup-terraform@v2
         with:
-          terraform_version: 1.1.7
+          terraform_version: 1.3.3
 
       - uses: azure/setup-helm@v3
 
@@ -94,7 +94,7 @@ jobs:
           HELM_CREDS_PASSWORD: ${{ secrets.AZURE_SERVICE_SECRET }}
           HELM_EXPERIMENTAL_OCI: "1"
 
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v3
         with:
           name: environment-release-plan
           path: ./.plans/plan.out
