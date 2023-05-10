@@ -72,5 +72,13 @@ init-template:
 	fi
 
 init: init-template
-	cp backend.tf_template backend.tf
-	cp OWNERS_template OWNERS
+	@if [ ! -f backend.tf ] ; then \
+		echo "Backend backend.tf not found... copying from template" ; \
+		cp backend.tf_template backend.tf ; \
+	else echo "Backend terraform.tfvars found... all OK" ; \
+	fi
+	@if [ ! -f OWNERS ] ; then \
+		echo "Owners file OWNERS not found... copying from template" ; \
+		cp OWNERS_template OWNERS ; \
+	else echo "Owners file OWNERS found... all OK" ; \
+	fi
