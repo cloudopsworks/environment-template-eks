@@ -1,5 +1,5 @@
 ##
-# (c) 2021 - Cloud Ops Works LLC - https://cloudops.works/
+# (c) 2023 - Cloud Ops Works LLC - https://cloudops.works/
 #            On GitHub: https://github.com/cloudopsworks
 #            Distributed Under Apache v2.0 License
 #
@@ -9,8 +9,37 @@ automatic: false
 # Optional only needed if not automatic 
 # requiredReviewers: 1
 
+# Configure repository to enable branch protection
+# https://docs.github.com/en/rest/reference/repos#update-branch-protection
+branchProtection: true
+protectedSources:
+  - "*.tf"
+  - "*.tfvars"
+  - OWNERS
+  - Makefile
+  - .github
+
 # Optional only needed if not automatic 
 # reviewers:
 #   - berahac
 #   - elasticguru-bot
 #   - cloudopswork-dev
+
+# Optional Only needed for permit owners to perform commits under protected branches.
+# Teams are specified as org/team-name
+#owners:
+#  - elasticguru-bot
+#  - cloudopsworks-dev
+#  - cloudopsworks/admin
+
+# Optional configure the repository members
+#contributors:
+#  admin:
+#    - cloudopsworks/admin
+#  triage: []
+#  pull:
+#    - user1
+#  push:
+#    - cloudopsworks/engineering
+#  maintain: []
+#

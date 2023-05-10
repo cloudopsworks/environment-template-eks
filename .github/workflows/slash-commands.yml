@@ -32,6 +32,9 @@ jobs:
             approve
             lgtm
             cancel
+            reject
+            close
+            rollback
             retry
           static-args: |
             author=${{ github.actor }}

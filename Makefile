@@ -13,6 +13,8 @@ CHART :=
 .PHONY: VERSION
 .PHONY: version
 .PHONY: module.tf
+.PHONY: init
+.PHONY: init-template
 
 module.tf:
 	@if [ ! -f $(TARGET)-module.tf ] ; then \
@@ -61,3 +63,14 @@ endif
 
 clean:
 	rm -f VERSION
+
+init-template:
+	@if [ ! -f terraform.tfvars ] ; then \
+		echo "Initial Variables terraform.tfvars not found... copying from template" ; \
+		cp terraform.tfvars_template terraform.tfvars ; \
+	else echo "Initial Variables terraform.tfvars found... all OK" ; \
+	fi
+
+init: init-template
+	cp backend.tf_template backend.tf
+	cp OWNERS_template OWNERS
