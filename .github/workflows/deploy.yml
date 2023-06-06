@@ -11,6 +11,9 @@ on:
     paths-ignore:
       - ".github/workflows/**"
 
+concurrency:
+  group: environment-eks
+  cancel-in-progress: false
 
 jobs:
   deploy:

@@ -12,6 +12,10 @@ on:
   #     - opened
   #     - synchronize
 
+concurrency:
+  group: environment-eks
+  cancel-in-progress: false
+
 permissions:
   contents: read
   packages: write

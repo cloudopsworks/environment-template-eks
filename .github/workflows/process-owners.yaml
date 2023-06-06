@@ -12,7 +12,7 @@ on:
     paths:
       - OWNERS
 
-concurrency: owners-environment-awseb
+concurrency: owners-environment-eks
 
 jobs:
   process-owners:
