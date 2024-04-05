@@ -5,7 +5,7 @@
 #
 module "MODULE_NAME" {
   source         = "cloudopsworks/helm/aws"
-  version        = "1.0.0"
+  version        = "1.1.0"
   helm_repo      = var.default_helm_repo
   helm_user      = local.ecr_user
   helm_password  = data.aws_ecr_authorization_token.token.password
